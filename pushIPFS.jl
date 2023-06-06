@@ -30,7 +30,7 @@ open("index.html","w") do io
 end
 
 open("README.md","a") do io
-    write(io,"\n $(toLocalUrl(result_link))")
+    write(io,"\n\n$(IPFS.getcid(result_link))")
 end
 
 ipfs"shutdown"

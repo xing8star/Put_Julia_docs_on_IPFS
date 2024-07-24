@@ -2,7 +2,9 @@ using IPFS
 
 docsname="docs"
 ipfs_docsname="julia_docs"
+online_gateway=toUrl("47.121.193.1")
 
+Base.nameof(x::AbstractIPFSObject)=(dirname ∘ name)(x)
 if !isdir(docsname) mkdir(docsname) end
 
 all_docs=readdir(docsname,join=true)
@@ -24,13 +26,19 @@ for i in all_docs
 end
 
 result_link=ipfs"stat /julia_docs"
-
-open("index.html","w") do io
-    write(io,"""<a href="http://$(toLocalUrl(result_link))">$ipfs_docsname</a>""")
+dir_links=ipfs"readdir /julia_docs"
+open("index.html","a") do io
+    write(io,"""<DT><a href="http://$(online_gateway(result_link))">$ipfs_docsname</a>\n""")
+    for i in dir_links
+        write(io,"""<DT><a href="http://$(online_gateway(i))">$(nameof(i))</a>\n""")
+    end
 end
 
 open("README.md","a") do io
-    write(io,"\n\n$(IPFS.getcid(result_link))")
+    write(io,"\n\n$(IPFS.cid(result_link)) - $ipfs_docsname")
+    for i in dir_links
+        write(io,"\n\n$(IPFS.cid(i)) - $(nameof(i))")
+    end
 end
 
 ipfs"shutdown"

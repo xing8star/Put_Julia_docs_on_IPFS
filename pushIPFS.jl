@@ -11,12 +11,12 @@ all_docs=readdir(docsname,join=true)
 
 if length(all_docs)==0 exit() end
 
-IPFS.daemon()
+
 
 if !(ipfs_docsname in ipfs"ls")
     ipfs"mkdir julia_docs"
 else
-    ipfs"rm julia_docs"
+    IPFS.rm(ipfs_docsname,recursive=true)
     ipfs"mkdir julia_docs"
 end
 ipfs"cd julia_docs"
@@ -41,4 +41,4 @@ open("README.md","a") do io
     end
 end
 
-ipfs"shutdown"
+

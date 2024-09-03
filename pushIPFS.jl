@@ -1,5 +1,5 @@
 using IPFS
-
+ENV["IPFS_PATH"]="$(ENV["HOME"])/.ipfs"
 docsname="docs"
 ipfs_docsname="julia_docs"
 online_gateway=toUrl("47.121.193.1")

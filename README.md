@@ -2,8 +2,22 @@
 
 - QmHash
 
-Qmcs4ZY5QmkqJg5NkozATJwE3hXCKQ6PRuDwLVyKtSzU5j - julia_docs
+QmShFyU4kc9wW8T1NRTNTYNrJz5LvqjhtdcwEwJx56yhU1 - julia_docs
+
+QmWFcxAc7RTRqBK1LdrYD17UESVdNNw3xG8GWGYouKZq1u - DataFrames
+
+QmUxnZMCVA9ps5jRBneeAa4T4Ca32bdXLQEUETG5qSoD19 - Flux
 
 QmSLyG6rcESw9ZQ9Scb1MB5avcspoCsGqDo3EZkGUDuMRv - Genie
 
+QmQaBukK8GcTeoYa6bQaHnhvnJrNNf8FmnwbLJzevhxrYk - Gtk
+
+QmVRQoAEgvYTzBCnuhHUaC5riU8YCQbXJxjV2wteLJyMRB - HTTP
+
+QmeU6Za7gNjmq2zydoXJgHC1tjQfzdHgUmzzZzKCxkG3ZJ - JLD2
+
 QmW5MnJrg1h3qX9fajgsB868RDo8kfnTg7Q2BHenNMLYx8 - JSON3
+
+QmT8Yy7M8NTZu1dwRm698DoHHthmmKSWhZ8Zus3MSLPcG8 - Lux
+
+QmVkgKjfNpnAfsC5LfYHFZYWakEZvv4DwJYsW4DEa4XV1q - julia
